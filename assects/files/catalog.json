@@ -1,0 +1,35 @@
+{
+"product":[
+{
+"id": 1001,
+  "name": "IPHONE",
+        "desc": "Apple Iphone 12 Gen",
+        "price": 150000,
+        "color": "red",
+        "image":
+            "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+
+},
+{
+"id": 1002,
+  "name": "Laptop",
+        "desc": "Acer Aspire 3 Laptop",
+        "price": 40000,
+        "color": "red",
+        "image": "https://static-ecapac.acer.com/media/catalog/product/cache/6523387fa80e14e7b37310b4db9abc2c/a/c/acer-aspire-3__a314-22-22g_wp-logo_01_1_3.jpg"
+
+},
+
+{
+"id": 1003,
+  "name": "Acer C202i Projector ",
+        "desc": "Resolution : Native FWVGA (854 x 480), Maximum UXGA (1,600 x 1,200)",
+        "price": 20000,
+        "color": "red",
+        "image": "https://static-ecapac.acer.com/media/catalog/product/cache/a2e755bb2f5b00fa33d64eface9107e3/a/c/acer-projector-c202i-02-light_1.jpg"
+
+}
+
+]
+
+}

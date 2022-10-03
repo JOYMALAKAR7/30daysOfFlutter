@@ -1,8 +1,10 @@
+import 'dart:convert';
+
 import 'package:days30_tutorial/models/catalog.dart';
 import 'package:days30_tutorial/widgets/Item_widgets.dart';
 import 'package:days30_tutorial/widgets/drawer.dart';
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({Key? key}) : super(key: key);
@@ -12,6 +14,20 @@ class Home_Page extends StatefulWidget {
 }
 
 class _Home_PageState extends State<Home_Page> {
+  @override
+  void initState() {
+    super.initState();
+    LoadData();
+  }
+
+  LoadData() async {
+    final catalogJson =
+        await rootBundle.loadString("assects/files/catalog.json");
+    final decodeData = jsonDecode(catalogJson);
+    var productData = decodeData["product"];
+    print(productData);
+  }
+
   @override
   Widget build(BuildContext context) {
     final dummyList = List.generate(
