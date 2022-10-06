@@ -1,5 +1,11 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+import 'dart:ffi';
+
+import 'package:flutter/foundation.dart';
+
 class catalogModel {
-  static final Items = [
+  static List<Item> Items = [
     Item(
         id: 1001,
         name: "IPHONE",
@@ -7,7 +13,15 @@ class catalogModel {
         price: 15000,
         color: 'red',
         image:
-            "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")
+            "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
+    Item(
+        id: 1001,
+        name: "IPHONE",
+        desc: "Apple Iphone 12 Gen",
+        price: 15000,
+        color: 'red',
+        image:
+            "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
   ];
 }
 

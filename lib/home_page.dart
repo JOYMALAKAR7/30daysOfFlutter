@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 import 'package:days30_tutorial/models/catalog.dart';
 import 'package:days30_tutorial/widgets/Item_widgets.dart';
@@ -14,6 +15,20 @@ class Home_Page extends StatefulWidget {
 }
 
 class _Home_PageState extends State<Home_Page> {
+  String? get color => null;
+
+  String? get desc => null;
+
+  int? get id => null;
+
+  String? get image => null;
+
+  Map<String, DynamicLibrary>? get map => null;
+
+  String? get name => null;
+
+  num? get price => null;
+
   @override
   void initState() {
     super.initState();
@@ -25,24 +40,31 @@ class _Home_PageState extends State<Home_Page> {
         await rootBundle.loadString("assects/files/catalog.json");
     final decodeData = jsonDecode(catalogJson);
     var productData = decodeData["product"];
-    print(productData);
+    // ignore: non_constant_identifier_names
+    // List.from(productData)
+    //     .map<Item>((item) =>
+    //         Item.fromMap(map!, id!, name!, desc!, price!, color!, image!))
+    //     .toList();
+    catalogModel.Items = List.from(productData);
+
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(
-      10,
-      (index) => catalogModel.Items[0],
-    );
+    // final dummyList = List.generate(
+    //   10,
+    //   (index) => catalogModel.Items[0],
+    // );
     return Scaffold(
       appBar: AppBar(title: Text("Catalog App")),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
-          itemCount: dummyList.length,
+          itemCount: catalogModel.Items.length,
           itemBuilder: (context, index) {
             return ItemWidgets(
-              item: dummyList[index],
+              item: catalogModel.Items[index],
             );
           },
         ),
